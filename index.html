@@ -21,11 +21,11 @@
             <p>s: <span ng-bind="firstName"></span></p>
         </div> -->
 
-        <div ng-app="myFirstApp" ng-controller="ctrl1">
+        <!-- <div ng-app="myFirstApp" ng-controller="ctrl1">
             <input type="text" ng-model="firstName"><br />
             <input type="text" ng-model="lastName"><br />
             <p style="text-align: center">姓名： {{firstName+' '+lastName}}</p>
-        </div>
+        </div> -->
 
         <div ng-app="secondApp" ng-controller="ctrl2" ng-init="names=['jami', 'snow', 'kalisi']">
             <ul>
@@ -37,12 +37,18 @@
     </body>
 
     <script>
-        let app = angular.module('myFirstApp', []);
+        // let app = angular.module('myFirstApp', []);
+        // app.controller('ctrl1', function($scope) {
+        //     $scope.firstName = 'John'
+        //     $scope.lastName = 'Snow'
+        // })
 
-        app.controller('ctrl1', function($scope) {
-            $scope.firstName = 'John'
-            $scope.lastName = 'Snow'
+        let app2 = angular.module('secondApp', []);
+        app2.controller('ctrl2', function($scope) {
+            console.log(`ctrl2:`, $scope);
         })
+
+
     </script>
 
 </html>
