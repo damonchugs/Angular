@@ -26,6 +26,14 @@
             <input type="text" ng-model="lastName"><br />
             <p style="text-align: center">姓名： {{firstName+' '+lastName}}</p>
         </div>
+
+        <div ng-app="secondApp" ng-controller="ctrl2" ng-init="names=['jami', 'snow', 'kalisi']">
+            <ul>
+                <li ng-repeat="it in names">
+                    {{it}}
+                </li>
+            </ul>
+        </div>
     </body>
 
     <script>
